@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Know Who To Trust</title>
+<meta name="description" content="Free 2-day live online workshop by Shaji Alavi: The Art of Building Relationships. Learn to build trust, read people and make wiser decisions about who you let into your life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600;700&display=swap">
+<style>
+/* Layout concept: one long, dark, cinematic page. Gold on midnight like the ad. Emotional arc:
+   pain -> reframe -> method -> coach -> personality test -> program (kept mysterious) -> join WhatsApp. */
+:root{
+  --bg:#070a12; --bg2:#0b101c; --panel:#101726; --panel2:#151e31; --line:rgba(226,190,120,.18);
+  --ink:#f3eee3; --muted:#a9b0c0; --gold:#e2be78; --gold2:#b98a3e; --gold-ink:#1a1306; --ruby:#d4202f; --good:#6fcf97; --warn:#f2b94b; --bad:#ef6b73;
+  --serif:"Cormorant Garamond","Times New Roman",serif; --sans:"Manrope","Noto Sans Devanagari",system-ui,sans-serif;
+  --hi:"Noto Serif Devanagari","Noto Sans Devanagari",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1160px,100%);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(64px,9vw,112px)}
+.eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);flex:none}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px,5vw,58px);margin-top:16px}
+h3{font-size:26px;line-height:1.2}
+.hi{font-family:var(--hi);font-weight:600;color:var(--gold)}
+.lead{color:var(--muted);font-size:clamp(17px,1.6vw,20px);max-width:62ch}
+.gold{background:linear-gradient(180deg,#f6dc9f,#c8964a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:0;cursor:pointer;font:700 17px var(--sans);letter-spacing:.02em;
+  padding:18px 30px;border-radius:999px;text-decoration:none;color:#fff;background:linear-gradient(180deg,#e7313f,#b3121f);
+  box-shadow:0 12px 30px -10px rgba(212,32,47,.7),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px -10px rgba(212,32,47,.8),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn.gold-btn{background:linear-gradient(180deg,#f3d896,#c08f43);color:var(--gold-ink);box-shadow:0 12px 30px -12px rgba(226,190,120,.6)}
+.btn.wa{background:linear-gradient(180deg,#2ee572,#12a84c);color:#04200e}
+.fine{font-size:13.5px;color:var(--muted)}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(7,10,18,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-family:var(--serif);font-size:24px;font-weight:700;letter-spacing:.02em;text-decoration:none;line-height:1}
+.brand small{display:block;font:600 10px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:5px}
+.bar .btn{padding:11px 22px;font-size:14.5px}
+
+.hero{padding-block:clamp(36px,6vw,80px) clamp(48px,7vw,90px);background:radial-gradient(900px 500px at 85% 20%,rgba(226,190,120,.14),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(30,50,110,.35),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(226,190,120,.08);font-size:13.5px;font-weight:700;letter-spacing:.06em;color:var(--gold)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--ruby);flex:none;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(212,32,47,0)}0%{box-shadow:0 0 0 0 rgba(212,32,47,.7)}100%{box-shadow:0 0 0 0 rgba(212,32,47,0)}}
+.hero h1{font-size:clamp(42px,6.4vw,84px);margin-top:22px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic}
+.hero .hindi{font-family:var(--hi);font-size:clamp(20px,2.4vw,28px);color:var(--gold);margin:18px 0 6px;font-weight:600;line-height:1.5}
+.hero .lead{margin-top:14px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px 24px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.facts div{font-size:14.5px;color:var(--muted)}
+.facts b{color:var(--ink)}
+.portrait{justify-self:center;width:min(440px,100%);margin:0}
+.frame{padding:10px;border:1px solid rgba(226,190,120,.6);border-radius:12px;background:linear-gradient(160deg,rgba(226,190,120,.22),rgba(226,190,120,.04));box-shadow:0 40px 80px -30px #000}
+.frame img{width:100%;border-radius:6px}
+.portrait .frame img{aspect-ratio:896/1152;object-fit:cover;object-position:center top}
+.nameplate{margin-top:16px;padding:20px 22px 18px;text-align:center;border-radius:10px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(226,190,120,.14),rgba(16,23,38,.9));position:relative}
+.nameplate::before{content:"";position:absolute;left:50%;top:-1px;width:64px;height:3px;margin-left:-32px;background:var(--gold);border-radius:0 0 3px 3px}
+.nameplate .np-kick{display:block;font-size:11px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.nameplate b{display:block;margin:6px 0 4px;font:600 clamp(32px,3.6vw,42px)/1.05 var(--serif);letter-spacing:.04em;background:linear-gradient(180deg,#f8e2ab,#c8964a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nameplate .np-role{display:block;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.nameplate .np-meta{display:block;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+
+.strip{background:var(--bg2);border-block:1px solid var(--line);padding-block:34px}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.strip .wrap>div{text-align:center}
+.strip b{display:block;font:700 clamp(34px,4vw,50px)/1 var(--serif);color:var(--gold)}
+.strip span{font-size:13.5px;color:var(--muted);letter-spacing:.04em}
+
+.pain .head{max-width:820px}
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+.pain-grid blockquote{margin:0;padding:26px 28px;background:var(--panel);border:1px solid var(--line);border-radius:6px;font-family:var(--serif);font-size:clamp(22px,2.2vw,27px);line-height:1.35;font-style:italic;color:#ece4d0}
+.pain-grid blockquote small{display:block;font:500 14px var(--sans);font-style:normal;color:var(--muted);margin-top:10px}
+.turn{margin-top:54px;padding:clamp(28px,4vw,48px);border-radius:8px;background:linear-gradient(135deg,rgba(226,190,120,.14),rgba(226,190,120,.03));border:1px solid var(--line)}
+.turn p{margin:0 0 14px;max-width:70ch;font-size:clamp(18px,1.8vw,21px)}
+.turn p:last-child{margin:0}
+.turn strong{color:var(--gold)}
+
+.learn{background:var(--bg2)}
+.days{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}
+.day{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:clamp(26px,3vw,40px)}
+.day .tag{font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.day h3{margin:10px 0 4px;font-size:clamp(28px,3vw,36px)}
+.day .hi{font-size:17px}
+.day ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px}
+.day li{display:grid;grid-template-columns:26px 1fr;gap:12px;color:#d9d6cc}
+.day li::before{content:"";width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231a1306' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat}
+.takeaways{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.takeaways>div{padding:22px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.02)}
+.takeaways h4{margin:0 0 6px;font:600 22px var(--serif);color:var(--gold)}
+.takeaways p{margin:0;font-size:15.5px;color:var(--muted)}
+
+.coach .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.coach figure{margin:0;position:relative}
+.coach figure img{aspect-ratio:4/5;object-fit:cover;object-position:64% 50%}
+.coach p{color:#d6d3ca;margin:18px 0 0}
+.coach .quote{font:italic 600 clamp(24px,2.6vw,32px)/1.3 var(--serif);color:var(--gold);border-left:2px solid var(--gold);padding-left:22px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chips span{padding:8px 16px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;color:var(--gold);background:rgba(226,190,120,.06)}
+.sig{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--gold);margin-top:22px}
+
+/* personality test */
+.quiz{background:radial-gradient(800px 420px at 50% 0%,rgba(226,190,120,.12),transparent 65%),var(--bg2)}
+.quiz-box{max-width:820px;margin:40px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:clamp(22px,4vw,46px);box-shadow:0 40px 80px -40px #000;min-height:200px}
+.center{text-align:center}
+.quiz-box h3{font-size:clamp(26px,3.4vw,36px)}
+.prog{height:5px;background:rgba(255,255,255,.08);border-radius:9px;overflow:hidden;margin-bottom:26px}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold2),var(--gold));transition:width .3s}
+.q-count{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;display:flex;justify-content:space-between;gap:10px}
+.q-text{font:600 clamp(24px,3vw,32px)/1.25 var(--serif);margin:12px 0 26px;min-height:2.6em}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.opt{font:700 17px var(--sans);color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:18px 10px;cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.opt:hover{border-color:var(--gold);background:#1a2540;transform:translateY(-2px)}
+.opt.on{border-color:var(--gold);background:rgba(226,190,120,.18)}
+.q-nav{display:flex;justify-content:space-between;margin-top:20px}
+.linkbtn{background:none;border:0;color:var(--gold);text-decoration:underline;cursor:pointer;font:600 14.5px var(--sans);padding:6px 0}
+.field{display:grid;gap:6px;margin-top:16px;text-align:left}
+.field label{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.field input{width:100%;padding:15px 16px;border-radius:8px;border:1px solid var(--line);background:#0a0f1b;color:var(--ink);font:500 17px var(--sans)}
+.err{color:#ff8b94;font-size:14px;min-height:1.2em;margin-top:10px}
+.sample-note{margin-top:18px;font-size:12.5px;color:var(--muted)}
+/* results */
+.res-head .sample-chip{display:inline-block;padding:5px 14px;border-radius:999px;background:rgba(111,207,151,.12);color:var(--good);font-size:13px;font-weight:700}
+.res-head .rh-small{margin:14px 0 4px;font-weight:700;color:var(--ink)}
+.res-head .big{font:700 clamp(30px,4.6vw,46px)/1.08 var(--serif);color:var(--gold);margin:4px 0 8px}
+.res-head .rh-sub{margin:0;font-size:14px;color:var(--muted)}
+.blk{margin:36px 0 16px;padding-top:26px;border-top:1px solid var(--line);font:600 26px var(--serif);color:var(--ink)}
+.bars{display:grid;gap:20px}
+.bar-row .lab{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:16px;margin-bottom:7px}
+.bar-row .track,.pr-row .track{height:14px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden}
+.fill{display:block;height:100%;border-radius:9px;width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.tagc{font-style:normal;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#1a1306;background:#d89b3a;padding:2px 8px;border-radius:4px;margin-left:6px;vertical-align:middle}
+.profile-line{width:100%;height:auto;display:block}
+.profile-rows{display:none}
+.pr-head{margin:18px 0 8px;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.pr-row{margin-bottom:12px}.pr-lab{display:flex;justify-content:space-between;gap:10px;font-size:15px;font-weight:600;margin-bottom:5px}
+.dr-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;text-align:left}
+.dr{padding:20px;border-radius:8px;border:1px solid var(--line);background:var(--panel2)}
+.dr h5{margin:0 0 12px;font:700 18px var(--sans)}
+.dr-dip{border-top:3px solid var(--bad)}.dr-dip h5{color:var(--bad)}
+.dr-rise{border-top:3px solid var(--good)}.dr-rise h5{color:var(--good)}
+.dr-item{padding:10px 0;border-top:1px solid rgba(255,255,255,.07)}.dr-item:first-of-type{border-top:0}
+.dr-item b{display:flex;justify-content:space-between;gap:10px;font-size:16px}
+.dr-item p{margin:3px 0;font-size:14.5px;color:var(--muted)}
+.dr-item small{font-size:12px;color:var(--gold);letter-spacing:.06em}
+.rec-main{padding:24px;border:1px solid var(--gold);border-radius:8px;background:linear-gradient(135deg,rgba(226,190,120,.16),rgba(226,190,120,.04));text-align:left}
+.rec-main h4{margin:4px 0 8px;font:600 clamp(26px,3vw,34px) var(--serif);color:var(--gold)}
+.rec-main p{margin:0;color:#e6e1d3}
+.rec-main .tagline,.plan-card .tagline{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.plan{display:grid;gap:14px;margin-top:14px;text-align:left}
+.plan-card{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:20px;border:1px solid var(--line);border-radius:8px;background:var(--panel2)}
+.plan-card .n{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:700 22px var(--serif);background:var(--gold);color:var(--gold-ink)}
+.plan-card h4{margin:0;font:600 24px var(--serif)}
+.plan-card p{margin:6px 0 0;font-size:15.5px;color:var(--muted)}
+.mail-status{margin:22px 0 0;font-size:14.5px;color:var(--muted)}
+@media(max-width:700px){.profile-line{display:none}.profile-rows{display:block}.dr-grid{grid-template-columns:1fr}}
+
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.who-grid>div{padding:26px 22px;border-top:2px solid var(--gold);background:var(--panel)}
+.who-grid h4{margin:0 0 8px;font:600 24px var(--serif)}
+.who-grid p{margin:0;font-size:15.5px;color:var(--muted)}
+
+.voices{background:var(--bg2)}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.t{position:relative;padding:30px 28px;background:var(--panel);border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;gap:20px}
+.t::before{content:"\201C";font:700 80px/0.6 var(--serif);color:var(--gold);opacity:.7}
+.t p{margin:0;font-size:16.5px;color:#e0dccf;flex:1}
+.t footer{display:flex;align-items:center;gap:14px}
+.av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#f3d896,#c08f43);color:var(--gold-ink);font-weight:800;flex:none}
+.t footer b{display:block;font-size:15.5px}
+.t footer span.role{font-size:13.5px;color:var(--muted)}
+.sample-tag{position:absolute;top:14px;right:14px;font-size:10.5px;font-weight:800;letter-spacing:.14em;color:var(--gold-ink);background:var(--gold);padding:4px 9px;border-radius:3px}
+
+.prog-sec .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,5vw,72px);align-items:center}
+.badge{width:min(400px,100%);aspect-ratio:1;object-fit:cover;justify-self:center;border-radius:50%;box-shadow:0 0 0 1px var(--line),0 40px 90px -30px rgba(226,190,120,.35)}
+.courses{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.courses span{padding:9px 18px;border:1px solid var(--gold);border-radius:999px;font-weight:700;font-size:14.5px;color:var(--gold)}
+.weeks{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line)}
+.weeks li{position:relative;display:grid;grid-template-columns:86px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.weeks b{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.weeks span{font-size:16.5px}
+.weeks .lock{filter:blur(6px);user-select:none;-webkit-user-select:none;pointer-events:none;opacity:.85}
+.weeks li.locked::after{content:"\1F512";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.7}
+.reveal-note{margin:14px 0 0;font-size:14px;color:var(--muted);font-style:italic}
+
+details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:0 24px}
+.faq-list{max-width:820px;margin:40px auto 0;display:grid;gap:12px}
+summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:24px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin:0 0 22px;color:var(--muted)}
+
+.final{text-align:center;background:radial-gradient(700px 360px at 50% 100%,rgba(226,190,120,.18),transparent 70%)}
+.final h2{font-size:clamp(38px,6vw,72px)}
+.final .lead{margin:20px auto 0}
+.final .cta-row{justify-content:center;margin-top:36px}
+.final .btn{font-size:19px;padding:21px 38px}
+
+footer.site{padding-block:44px calc(44px + 84px);border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+footer.site .wrap{display:grid;gap:12px;text-align:center}
+.float{position:fixed;left:0;right:0;bottom:0;z-index:35;display:none;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(7,10,18,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.float .btn{width:100%;padding:15px 20px}
+
+/* ---- editor (only active at #edit) ---- */
+.ed-bar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:10px 16px;background:#fff;color:#111;font:600 14px var(--sans);box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.ed-bar b{margin-right:auto}
+.ed-bar button{font:700 14px var(--sans);padding:9px 16px;border-radius:8px;border:1px solid #bbb;background:#f4f4f4;color:#111;cursor:pointer}
+.ed-bar button.pri{background:#0a7d3b;border-color:#0a7d3b;color:#fff}
+body.editing{padding-top:64px}
+body.editing .bar{top:64px}
+body.editing [contenteditable]:hover{outline:1px dashed var(--gold);outline-offset:3px;cursor:text}
+body.editing [contenteditable]:focus{outline:2px solid var(--gold);outline-offset:3px}
+.ed-img{cursor:pointer;outline:3px dashed var(--gold);outline-offset:-3px}
+.ed-rel{position:relative}
+.ed-tools{position:absolute;top:4px;right:4px;z-index:20;display:flex;gap:4px}
+.ed-tools button{font:700 12px var(--sans);padding:5px 9px;border-radius:6px;border:0;cursor:pointer;background:#fff;color:#111}
+.ed-modal{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.7);display:grid;place-items:center;padding:16px}
+.ed-modal>div{background:#fff;color:#111;border-radius:12px;padding:24px;width:min(560px,100%);max-height:90vh;overflow:auto;font:500 14px var(--sans)}
+.ed-modal h3{font:700 22px var(--sans);margin-bottom:6px}
+.ed-modal label{display:block;margin:14px 0 4px;font-weight:700;font-size:13px;color:#111;letter-spacing:0;text-transform:none}
+.ed-modal input{width:100%;padding:11px;border:1px solid #bbb;border-radius:8px;font:500 14px var(--sans);background:#fff;color:#111}
+.ed-modal small{color:#555;display:block;margin-top:3px}
+.ed-modal .row{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.ed-modal button{font:700 14px var(--sans);padding:10px 18px;border-radius:8px;border:1px solid #bbb;background:#f4f4f4;color:#111;cursor:pointer}
+.ed-modal button.pri{background:#0a7d3b;border-color:#0a7d3b;color:#fff}
+
+@media(max-width:960px){
+  .hero .wrap,.coach .wrap,.prog-sec .wrap{grid-template-columns:1fr}
+  .portrait{width:min(380px,100%);margin:18px auto 26px}
+  .who-grid{grid-template-columns:1fr 1fr}.t-grid,.takeaways{grid-template-columns:1fr}
+  .coach figure{max-width:480px;margin-inline:auto}
+  .badge{width:min(320px,82%)}
+}
+@media(max-width:700px){
+  body{font-size:16.5px}
+  .strip .wrap{grid-template-columns:1fr 1fr;gap:26px 14px}
+  .pain-grid,.days,.who-grid{grid-template-columns:1fr}
+  .float{display:block}.bar .btn{display:none}
+  .btn{width:100%}.cta-row{flex-direction:column;align-items:stretch}
+  .weeks li{grid-template-columns:70px 1fr}
+    .plan-card{grid-template-columns:42px 1fr;gap:12px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<header class="bar" id="siteBar">
+  <div class="wrap">
+    <a class="brand" href="#top">Know Who To Trust<small>Shaji Alavi · Relationship Coach</small></a>
+    <a class="btn" href="#" data-wa>Join Free Workshop</a>
+  </div>
+</header>
+
+<main id="siteMain">
+<span id="top"></span>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill"><i></i> 2-DAY FREE LIVE WORKSHOP · FIRST 50 SEATS</span>
+      <h1>Not everyone who smiles at you is <em class="gold">on your side.</em></h1>
+      <p class="hindi">जानिए, आपके जीवन में किस पर भरोसा करना है।</p>
+      <p class="lead">Learn the art of building real relationships, reading people with clarity and trusting the right ones, before a wrong decision costs you your money, your peace or your years.</p>
+      <div class="cta-row">
+        <a class="btn" href="#" data-wa>Reserve My Free Seat &nbsp;›</a>
+        <span class="fine">Live online · Hindi &amp; English · Joining link on WhatsApp</span>
+      </div>
+      <div class="facts">
+        <div><b>2 days</b>, live</div>
+        <div><b>7:00 PM IST</b> sessions</div>
+        <div>Worth <s>₹999</s> · <b>Free</b> for 50</div>
+      </div>
+    </div>
+    <figure class="portrait">
+      <div class="frame"><img src="img/hero.jpg" data-img="hero" data-max="1000" alt="Shaji Alavi, relationship coach" width="896" height="1152" fetchpriority="high"></div>
+      <figcaption class="nameplate"><span class="np-kick">Your host</span><b>Shaji Alavi</b><span class="np-role">Relationship Coach</span><span class="np-meta">6 years of coaching · 1000+ people trained</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div data-repeat><b>6</b><span>years of coaching</span></div>
+    <div data-repeat><b>1000+</b><span>people trained</span></div>
+    <div data-repeat><b>Teams</b><span>coached through corporate workshops</span></div>
+    <div data-repeat><b>8 weeks</b><span>Relationship Mastery Program</span></div>
+  </div>
+</div>
+
+<section class="pain" id="why">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Be honest with yourself</div>
+      <h2>You gave them your trust. <span class="gold">They gave you a lesson.</span></h2>
+      <p class="lead" style="margin-top:20px">Almost everyone reading this has carried one of these moments quietly, without telling anyone how much it hurt.</p>
+    </div>
+    <div class="pain-grid">
+      <blockquote data-repeat>“I helped them when no one else did. The day I needed them, they were gone.”<small>सबसे ज़्यादा चोट वहीं लगती है, जहाँ सबसे ज़्यादा भरोसा था।</small></blockquote>
+      <blockquote data-repeat>“A partner I believed in took the money, the credit and my confidence with them.”<small>Business is built on people. One wrong person can undo years.</small></blockquote>
+      <blockquote data-repeat>“I keep wondering how I did not see it coming.”<small>You were not careless. No one ever taught you what to look for.</small></blockquote>
+      <blockquote data-repeat>“Some people leave me exhausted, yet I can’t say why.”<small>That feeling is information. Most of us were taught to ignore it.</small></blockquote>
+    </div>
+    <div class="turn">
+      <p><strong>It was never about bad luck, and it was never because you are “too trusting”.</strong></p>
+      <p>Trusting is a beautiful quality. The pain begins when we trust <em>without knowing how to observe</em>. We listen to words, while behaviour has been telling the truth all along.</p>
+      <p>Over six years of working with more than a thousand people, Shaji Alavi found the same pattern in boardrooms, families and friendships. The people who protect their peace are not the suspicious ones. They are the ones who learned to <strong>see clearly, and then trust wisely.</strong> That skill can be learned, and it begins in two evenings.</p>
+    </div>
+  </div>
+</section>
+
+<section class="learn" id="learn">
+  <div class="wrap">
+    <div class="eyebrow">Inside the workshop</div>
+    <h2>Two evenings. <span class="gold">A new way of seeing people.</span></h2>
+    <p class="lead" style="margin-top:18px">संबंध बनाने की कला: practical, interactive and live. You will not sit through a lecture. You will practise, get feedback and leave with something you can use the very next day.</p>
+    <div class="days">
+      <div class="day">
+        <div class="tag">Day 1 · 7:00 PM IST</div>
+        <h3>Building Awareness</h3><div class="hi">जागरूकता की नींव</div>
+        <ul>
+          <li data-repeat>Why relationships decide your success, your happiness and your net worth</li>
+          <li data-repeat>The two kinds of people in your life: those who build you up and those who quietly pull you down</li>
+          <li data-repeat>The art of simple observation: seeing what is actually there, not what you hope or fear</li>
+          <li data-repeat>A short practical assignment, reviewed personally on Day 2</li>
+        </ul>
+      </div>
+      <div class="day">
+        <div class="tag">Day 2 · 7:00 PM IST</div>
+        <h3>Deep Insights</h3><div class="hi">गहरी समझ</div>
+        <ul>
+          <li data-repeat>Personal feedback on what you observed</li>
+          <li data-repeat>The Mood Scale: how a person’s emotional state shapes the way they act</li>
+          <li data-repeat>How to anticipate who will support you in a crisis and who will step back</li>
+          <li data-repeat>The path from awareness to real mastery</li>
+        </ul>
+      </div>
+    </div>
+    <div class="takeaways">
+      <div data-repeat><h4>Protect yourself</h4><p>Learn the early signs of betrayal and stop paying for the same lesson twice.</p></div>
+      <div data-repeat><h4>Build deeper bonds</h4><p>Understand how trust is created, how it breaks and how to earn it back.</p></div>
+      <div data-repeat><h4>Decide with confidence</h4><p>Hire, partner, befriend and commit with eyes open and a calm mind.</p></div>
+    </div>
+    <div class="cta-row" style="justify-content:center;margin-top:40px"><a class="btn" href="#" data-wa>Yes, Save My Seat &nbsp;›</a></div>
+  </div>
+</section>
+
+<section class="coach" id="coach">
+  <div class="wrap">
+    <figure>
+      <div class="frame"><img src="img/coach.jpg" data-img="coach" data-max="1400" alt="Shaji Alavi holding a brass compass" width="1024" height="572" loading="lazy"></div>
+    </figure>
+    <div>
+      <div class="eyebrow">Your coach</div>
+      <h2>Shaji Alavi</h2>
+      <p>For six years, Shaji has stood in front of rooms of professionals, business owners and families, teaching communication, public speaking and personal leadership. In every room, behind every question, he kept hearing one quiet fear: <em>“How do I know who to trust?”</em></p>
+      <p>That question became his life’s work. He built the <strong>Know Who To Trust</strong> method, a practical way to observe people, understand what drives their behaviour and build relationships that last. Today he has trained <strong>more than 1,000 people</strong> and guided teams at several organisations through his workshops and programs.</p>
+      <div class="quote">“My mission is simple. I want you to build relationships that lift every area of your life, and never feel blindsided by a person again.”</div>
+      <div class="chips"><span>6 years of coaching</span><span>1000+ people trained</span><span>Corporate team workshops</span><span>Communication &amp; leadership</span></div>
+      <div class="sig">Shaji Alavi</div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz" id="test">
+  <div class="wrap">
+    <div style="text-align:center;display:grid;justify-items:center">
+      <div class="eyebrow">Free personality test</div>
+      <h2>Where do you <span class="gold">really</span> stand?</h2>
+      <p class="lead" style="margin-top:16px">Answer Yes, Maybe or No. You will see which area of your life needs attention first, which comes next, and receive your personal report by email.</p>
+    </div>
+    <div class="quiz-box" id="quizBox" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="eyebrow">Who this is for</div>
+    <h2>If people matter to your life, <span class="gold">this is for you.</span></h2>
+    <div class="who-grid">
+      <div data-repeat><h4>Working professionals</h4><p>Navigate office politics, choose mentors and colleagues wisely and grow without being undermined.</p></div>
+      <div data-repeat><h4>Business owners</h4><p>Pick partners, hires and clients with clarity. Your business is only as strong as the people in it.</p></div>
+      <div data-repeat><h4>Families &amp; couples</h4><p>Communicate so that you are truly understood, and rebuild closeness where distance has crept in.</p></div>
+      <div data-repeat><h4>Anyone who was hurt</h4><p>If someone’s betrayal still lingers, learn why it happened and how to open your heart again, wisely.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="voices" id="voices">
+  <div class="wrap">
+    <div class="eyebrow">In their words</div>
+    <h2>What participants <span class="gold">take away.</span></h2>
+    <div class="t-grid">
+      <article class="t" data-repeat><span class="sample-tag">SAMPLE SLOT</span><p>Paste a real participant’s words here. Short, specific and in their own voice works best: what changed for them after the workshop.</p><footer><div class="av">P</div><div><b>Participant name</b><span class="role">City · Profession</span></div></footer></article>
+      <article class="t" data-repeat><span class="sample-tag">SAMPLE SLOT</span><p>Paste a second real testimonial here. Ask for a photo or WhatsApp screenshot as supporting proof.</p><footer><div class="av">P</div><div><b>Participant name</b><span class="role">City · Profession</span></div></footer></article>
+      <article class="t" data-repeat><span class="sample-tag">SAMPLE SLOT</span><p>Paste a third real testimonial here, ideally from a different kind of participant, such as a business owner or a homemaker.</p><footer><div class="av">P</div><div><b>Participant name</b><span class="role">City · Profession</span></div></footer></article>
+    </div>
+  </div>
+</section>
+
+<section class="prog-sec" id="program">
+  <div class="wrap">
+    <img class="badge" src="img/program.jpg" data-img="program" data-max="800" alt="Know Who To Trust: Observe before you trust" width="800" height="800" loading="lazy">
+    <div>
+      <div class="eyebrow">After the workshop</div>
+      <h2>Two days open the door. <span class="gold">Eight weeks take you through it.</span></h2>
+      <p class="lead" style="margin-top:18px">If the workshop speaks to you, the <b>Relationship Mastery Program</b> is the complete path: live weekly sessions with Shaji, practice, feedback and a community that grows with you. Three journeys, one program:</p>
+      <div class="courses"><span data-repeat>Know Who To Trust</span><span data-repeat>Ups and Downs in Life</span><span data-repeat>Problems of Work</span></div>
+      <ol class="weeks">
+        <li><b>Week 1</b><span>The Trust Foundation</span></li>
+        <li class="locked" data-noedit><b>Week 2</b><span class="lock" aria-hidden="true">Chapter title hidden for now</span></li>
+        <li class="locked" data-noedit><b>Week 3</b><span class="lock" aria-hidden="true">Chapter title kept a secret</span></li>
+        <li class="locked" data-noedit><b>Week 4</b><span class="lock" aria-hidden="true">Chapter title hidden here</span></li>
+        <li class="locked" data-noedit><b>Week 5</b><span class="lock" aria-hidden="true">Chapter title kept secret for</span></li>
+        <li class="locked" data-noedit><b>Week 6</b><span class="lock" aria-hidden="true">Chapter title hidden for now</span></li>
+        <li class="locked" data-noedit><b>Week 7</b><span class="lock" aria-hidden="true">Chapter title kept a secret</span></li>
+        <li class="locked" data-noedit><b>Week 8</b><span class="lock" aria-hidden="true">Chapter title hidden here</span></li>
+      </ol>
+      <p class="reveal-note">Each chapter is revealed week by week, to those who enrol.</p>
+    </div>
+  </div>
+</section>
+
+<section class="learn" id="faq">
+  <div class="wrap">
+    <div style="text-align:center;display:grid;justify-items:center"><div class="eyebrow">Questions</div><h2>Before you join</h2></div>
+    <div class="faq-list">
+      <details data-repeat><summary>Is the workshop really free?</summary><p>Yes. The workshop is valued at ₹999 and is free for the first 50 participants. There is nothing to pay to attend.</p></details>
+      <details data-repeat><summary>How do I attend?</summary><p>Tap any “Join” button to enter the workshop WhatsApp group. The joining link, dates and reminders are shared there. The sessions are live online at 7:00 PM IST.</p></details>
+      <details data-repeat><summary>Which language is it in?</summary><p>Shaji teaches in simple Hindi and English, so you can follow comfortably whichever you prefer.</p></details>
+      <details data-repeat><summary>Do I need any background or experience?</summary><p>No. If you have ever wondered whether you can truly trust someone, you are ready. Please come with an open mind and be on time.</p></details>
+      <details data-repeat><summary>What if I miss a session?</summary><p>Seats are limited and the format is interactive, so live attendance gives the most value. Details about recordings are shared in the group.</p></details>
+      <details data-repeat><summary>Is this therapy?</summary><p>No. This is an educational coaching workshop. It does not replace professional medical or mental health care.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="join">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center">Your seat is waiting</div>
+    <h2>The right people are out there. <span class="gold">Learn to recognise them.</span></h2>
+    <p class="lead">बेहतर रिश्ते, एक बेहतर आप की ओर. Only 50 seats are free. Join the workshop WhatsApp group now and receive your joining link first.</p>
+    <div class="cta-row"><a class="btn wa" href="#" data-wa>Join the WhatsApp Group &nbsp;›</a></div>
+    <p class="fine" style="margin-top:16px">Tapping the button opens WhatsApp. Tap “Join group” there.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site" id="siteFooter">
+  <div class="wrap">
+    <div class="brand" style="font-size:22px">Know Who To Trust</div>
+    <div>© 2026 Shaji Alavi. All rights reserved.</div>
+    <div>This workshop is educational coaching and is not a substitute for medical, legal or mental health advice. Individual experiences and results vary.</div>
+  </div>
+</footer>
+
+<div class="float" id="siteFloat"><a class="btn" href="#" data-wa>Join Free Workshop &nbsp;›</a></div>
+
+<script src="content.js"></script>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>
