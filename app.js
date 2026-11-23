@@ -30,9 +30,10 @@
   /* ---------- Personality test ---------- */
   var B=window.QUIZ_BANK,Q=B.questions,N=Q.length,keys=Object.keys(B.areas),TR=B.traits;
   var box=$("#quizBox");
-  var S={name:"",email:"",phone:"",ans:[],i:0};
+  var LANG="en";
+  var S={name:"",email:"",phone:"",ans:[],i:0,lang:"en"};
   var KEY="kwtt_quiz_v2";
-  function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+  function save(){try{S.lang=LANG;localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
   function load(){try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&s.ans&&s.ans.length<N&&s.ans.length>0&&s.email)return s}catch(e){}return null}
   function clear(){try{localStorage.removeItem(KEY)}catch(e){}}
 
@@ -42,7 +43,7 @@
       '<button class="btn gold-btn" id="qStart" type="button">Start the Free Test &nbsp;›</button>'+
       (saved?'<div><button class="linkbtn" id="qResume" type="button">Resume where I left off (question '+(saved.ans.length+1)+')</button></div>':'')+'</div>';
     $("#qStart").onclick=form;
-    if(saved)$("#qResume").onclick=function(){S=saved;ask()};
+    if(saved)$("#qResume").onclick=function(){S=saved;LANG=saved.lang||"en";ask()};
   }
   function form(){
     box.innerHTML='<div class="center"><h3>Where should we send your report?</h3><p class="fine" style="margin-top:8px">Your personal result is emailed to you when you finish.</p></div>'+
@@ -57,18 +58,20 @@
       if(n.length<2){er.textContent="Please enter your name.";return}
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(e)){er.textContent="Please enter a valid email address.";return}
       if(!/^[6-9]\d{9}$/.test(p)){er.textContent="Please enter a valid 10-digit Indian mobile number.";return}
-      S={name:n,email:e,phone:p,ans:[],i:0};save();ask();
+      S={name:n,email:e,phone:p,ans:[],i:0,lang:LANG};save();ask();
     };
   }
   function ask(){
     var i=S.ans.length;
     if(i>=N){return finish()}
-    box.innerHTML='<div class="prog"><i style="width:'+(i/N*100)+'%"></i></div>'+
-      '<div class="q-count"><span>Question '+(i+1)+' of '+N+'</span><span>'+Math.round(i/N*100)+'%</span></div>'+
+    box.innerHTML='<div class="q-language" style="display:flex;justify-content:flex-end;gap:8px;margin-bottom:14px"><button type="button" class="linkbtn" data-lang="en" aria-pressed="'+(LANG==="en"?"true":"false")+'" style="border:1px solid '+(LANG==="en"?"var(--gold)":"var(--line)")+';padding:6px 12px;border-radius:20px">English</button><button type="button" class="linkbtn" data-lang="hi" aria-pressed="'+(LANG==="hi"?"true":"false")+'" style="border:1px solid '+(LANG==="hi"?"var(--gold)":"var(--line)")+';padding:6px 12px;border-radius:20px">हिन्दी</button></div>'+
+      '<div class="prog"><i style="width:'+(i/N*100)+'%"></i></div>'+
+      '<div class="q-count"><span>'+(LANG==="hi"?"प्रश्न "+(i+1)+" / "+N:"Question "+(i+1)+" of "+N)+'</span><span>'+Math.round(i/N*100)+'%</span></div>'+
       '<div class="q-text"></div>'+
-      '<div class="tri"><button type="button" class="opt" data-a="y">Yes</button><button type="button" class="opt" data-a="m">Maybe</button><button type="button" class="opt" data-a="n">No</button></div>'+
-      '<div class="q-nav"><button type="button" class="linkbtn" id="qBack"'+(i?'':' hidden')+'>‹ Previous</button><span></span></div>';
-    $(".q-text",box).textContent=Q[i][2];
+      '<div class="tri"><button type="button" class="opt" data-a="y">'+(LANG==="hi"?"हाँ":"Yes")+'</button><button type="button" class="opt" data-a="m">'+(LANG==="hi"?"शायद":"Maybe")+'</button><button type="button" class="opt" data-a="n">'+(LANG==="hi"?"नहीं":"No")+'</button></div>'+
+      '<div class="q-nav"><button type="button" class="linkbtn" id="qBack"'+(i?'':' hidden')+'>'+(LANG==="hi"?"‹ पिछला प्रश्न":"‹ Previous")+'</button><span></span></div>';
+    $(".q-text",box).textContent=LANG==="hi"&&window.QUIZ_HI&&window.QUIZ_HI[i]?window.QUIZ_HI[i]:Q[i][2];
+    box.querySelectorAll("[data-lang]").forEach(function(b){b.onclick=function(){LANG=b.getAttribute("data-lang");S.lang=LANG;save();ask()}});
     box.querySelectorAll(".opt").forEach(function(b){b.onclick=function(){S.ans.push(b.getAttribute("data-a"));save();ask()}});
     $("#qBack").onclick=function(){S.ans.pop();save();ask()};
   }
@@ -180,7 +183,7 @@
       '<div class="center"><p class="mail-status" id="mailStatus"></p><div class="cta-row" style="justify-content:center"><a class="btn wa" href="#" data-wa>Join the Free Workshop on WhatsApp &nbsp;›</a></div><button class="linkbtn" id="qAgain" type="button">Retake the test</button></div>';
     setTimeout(function(){box.querySelectorAll(".fill").forEach(function(f){f.style.width=f.getAttribute("data-w")+"%"})},60);
     bindWA();
-    $("#qAgain").onclick=function(){clear();S={name:"",email:"",phone:"",ans:[],i:0};intro()};
+    $("#qAgain").onclick=function(){clear();S={name:"",email:"",phone:"",ans:[],i:0,lang:"en"};LANG="en";intro()};
     var st=$("#mailStatus");
     track("CompleteRegistration");
     var payload={name:S.name,email:S.email,phone:S.phone,time:new Date().toISOString(),programmes:R.areas.map(function(x){return {area:x.name,percent:x.pct}}),dips:R.dips.map(function(t){return t.name+" "+t.pct}),rises:R.rises.map(function(t){return t.name+" "+t.pct}),answers:S.ans.join("")};
