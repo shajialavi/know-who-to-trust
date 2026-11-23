@@ -9,9 +9,9 @@
 window.SITE_CONFIG = {
   whatsapp: "https://chat.whatsapp.com/IAlK8vaXooG1hFl1JZCLd4", // current workshop community. Every "Join" and "Reserve" button uses this.
   coachEmail: "shaji.alavi@gmail.com", // Shaji's email: receives a copy of every test result
-  emailjsService: "service_4wzexkn",   // EmailJS Service ID   (free account at emailjs.com, see README)
-  emailjsTemplate: "template_5k9uxkq",  // EmailJS Template ID
-  emailjsKey: "xFmjENwiAjxVC-en9",       // EmailJS Public Key
+  emailjsService: "",   // EmailJS Service ID   (free account at emailjs.com, see README)
+  emailjsTemplate: "",  // EmailJS Template ID
+  emailjsKey: "",       // EmailJS Public Key
   leadWebhook: "",      // optional: Google Sheet (Apps Script) URL that stores every test result
   pixelId: ""           // optional: Meta Pixel ID
 };
