@@ -18,7 +18,7 @@
   }
   window.__bindWA=bindWA;
   bindWA();
-  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-wa]");if(a&&!isEdit)track("Lead")});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-wa]");if(a&&!isEdit)track("Contact")});
 
   /* ---------- Meta Pixel (optional) ---------- */
   if(CFG.pixelId){
@@ -58,7 +58,7 @@
       if(n.length<2){er.textContent="Please enter your name.";return}
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(e)){er.textContent="Please enter a valid email address.";return}
       if(!/^[6-9]\d{9}$/.test(p)){er.textContent="Please enter a valid 10-digit Indian mobile number.";return}
-      S={name:n,email:e,phone:p,ans:[],i:0,lang:LANG};save();ask();
+      S={name:n,email:e,phone:p,ans:[],i:0,lang:LANG};save();track("Lead");ask();
     };
   }
   function ask(){
@@ -185,7 +185,7 @@
     bindWA();
     $("#qAgain").onclick=function(){clear();S={name:"",email:"",phone:"",ans:[],i:0,lang:"en"};LANG="en";intro()};
     var st=$("#mailStatus");
-    track("CompleteRegistration");
+    track("HotLead");
     var payload={name:S.name,email:S.email,phone:S.phone,time:new Date().toISOString(),programmes:R.areas.map(function(x){return {area:x.name,percent:x.pct}}),dips:R.dips.map(function(t){return t.name+" "+t.pct}),rises:R.rises.map(function(t){return t.name+" "+t.pct}),answers:S.ans.join("")};
     if(CFG.leadWebhook){try{fetch(CFG.leadWebhook,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(payload)}).catch(function(){})}catch(e){}}
     clear();
